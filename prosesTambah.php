@@ -11,7 +11,8 @@ $_SESSION['products'][] = [
     "price"    => $_POST['price'],
     "kondisi"  => $_POST['kondisi'],
     "fakultas" => $_POST['fakultas'],
-    "image"    => "assets/default.jpg"
+    "image"    => "assets/default.jpg",
+    "description" => $_POST['description']
 ];
 
-header('Location: index.php');
+header('Location: produk.php');

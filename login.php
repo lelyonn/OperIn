@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +26,7 @@
         <form method="POST" action="prosesLogin.php">
             <div class="mb-4">
                 <label class="block text-sm text-gray-600 mb-1">Email</label>
-                <input type="text" name="nim" placeholder="Email UNS"
+                <input type="text" name="email" placeholder="Email UNS"
                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-sky-400">
             </div>
             <div class="mb-6">
