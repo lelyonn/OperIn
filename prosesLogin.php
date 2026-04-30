@@ -6,24 +6,37 @@ $users = [
         'email' => 'mahasiswa@student.uns.ac.id',
         'password' => 'password123',
         'nama' => 'Zidnii Rajwa'
-    ],
+    ]
+];
+
+$admins = [
     [
         'email' => 'admin@operin.id',
         'password' => 'admin123',
         'nama' => 'Admin OperIn'
     ]
 ];
-
 $input_email = $_POST['email'] ?? ''; 
 $input_pass  = $_POST['password'] ?? '';
 
 $login_sukses = false;
 $nama_user = "";
+$redirect_url = "produk.php";
 
 foreach ($users as $user) {
     if ($user['email'] === $input_email && $user['password'] === $input_pass) {
         $login_sukses = true;
         $nama_user = $user['nama'];
+        $redirect_url = "produk.php";
+        break;
+    }
+}
+
+foreach ($admins as $admin) {
+    if ($admin['email'] === $input_email && $admin['password'] === $input_pass) {
+        $login_sukses = true;
+        $nama_user = $admin['nama'];
+        $redirect_url = "dashboardAdmin.php";
         break;
     }
 }
@@ -44,7 +57,7 @@ if ($login_sukses) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proses Login...</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <meta http-equiv="refresh" content="2;url=produk.php">
+    <meta http-equiv="refresh" content="2;url=<?= $redirect_url ?>">
 </head>
 <body class="bg-sky-600 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-2xl shadow-xl text-center">

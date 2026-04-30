@@ -100,7 +100,7 @@ $p = $products[$id];
 
                 <!-- TOMBOL -->
                 <div class="flex gap-3 mt-8">
-                    <a href="#"
+                    <a href="hubungiPenjual.php?id=<?= $id ?>"
                     class="px-6 py-2 bg-sky-400 text-white rounded-lg hover:bg-sky-600 transition-all font-semibold">
                         Hubungi Penjual
                     </a>
