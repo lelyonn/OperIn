@@ -17,9 +17,7 @@ $products = $_SESSION['products'];
     <title>OperIn - Platform Preloved Mahasiswa</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        html {scroll-behavior: smooth;}
     </style>
 </head>
 <body>
@@ -43,7 +41,7 @@ $products = $_SESSION['products'];
         <h3 class="text-lg text-white mt-6">Platform Marketplace Khusus Mahasiswa Universitas Sebelas  Maret</h3>
         <h3 class="text-lg text-white mt-1">Jual, beli, atau cari barang yang kamu butuhkan dengan mudah dan terpercaya.</h3>
         
-        <!-- YANG 2 ITU -->
+        <!-- BUTTON -->
         <div class="flex mt-8 gap-10">
         <a href="produk.php" class="flex items-center bg-orange-400 text-white text-xl font-semibold px-8 py-1 rounded-[1vw] shadow-lg transition-all hover:bg-orange-700 hover:scale-105">
             Mulai Jelajahi
@@ -53,7 +51,7 @@ $products = $_SESSION['products'];
         </a>
         </div>
 
-        <!-- YANG 3 -->
+        <!-- ACHIEVE? -->
          <div class="grid grid-cols-3 mt-12 gap-x-25 gap-y-1">
             <p class="text-orange-400 text-4xl font-bold">500+</p>
             <p class="text-orange-400 text-4xl font-bold">1200+</p>

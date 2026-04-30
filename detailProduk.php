@@ -22,39 +22,9 @@ $p = $products[$id];
 </head>
 <body class="min-h-screen bg-amber-50">
 
-        <!-- NAVBAR -->
-        <nav class="sticky top-0 z-50">
-    
-            <div class="bg-sky-600 py-4 shadow-lg">
-                <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
-                    <!-- LOGO -->
-                    <div class="flex items-center text-white font-bold text-3xl shrink-0">
-                        <a href="index.php" class="flex items-center">
-                            <img src="assets/logo-operin.png" alt="Logo Operin" class="max-h-8 pr-2">
-                            <span>OperIn</span>
-                        </a>
-                    </div>
-
-                    <!-- SEARCH BAR  -->
-                    <form class="flex flex-1 max-w-2xl">
-                        <input type="text" name="search" id="search" placeholder="Cari Barang..." 
-                        class="w-full pl-5 p-2 text-black font-normal text-lg bg-white border border-orange-400 focus:outline-orange-400 rounded-l-lg">
-                        <button type="submit" class="px-5 bg-orange-400 text-white rounded-r-lg hover:bg-orange-500 transition-all">
-                            <img src="assets/search.svg" alt="" class="max-h-6">
-                        </button>
-                    </form>
-
-                    <!-- ICONS -->
-                    <div class="flex gap-5 shrink-0 text-white">
-                        <a href="#" class="hover:text-orange-400"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z"></path></svg></a>
-                        <a href="tambahBarang.php" class="hover:text-orange-400"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></a>
-                        <a href="login.php" class="hover:text-orange-400"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></a>
-                    </div>
-                </div>
-            </div>
-    
-        </nav>
-        <!-- END OF NAVBAR -->
+    <!-- NAVBAR -->
+    <?php include 'components/navbar.php'; ?>
+    <!-- END OF NAVBAR -->
 
     <!-- KONTEN -->
     <div class="max-w-4xl mx-auto mt-10 px-6">
