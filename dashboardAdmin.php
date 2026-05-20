@@ -24,7 +24,26 @@ require 'needAdmin.php';
         <!-- NAVBAR -->
         <?php include 'components/navbar.php'; ?>
             <!-- END OF NAVBAR  -->
-        <div class="flex items-center text-black font-bold text-7xl mx-auto my-auto">Selamat datang, ADMIN</div>
+        <main class="max-w-6xl mx-auto px-4 py-12 w-full">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-800">Dashboard Admin OperIn</h1>
+                <p class="text-gray-500 mt-2">Kelola data master dan produk yang digunakan pada database OperIn.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="adminJenisProduk.php" class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
+                    <p class="text-sm text-sky-600 font-semibold mb-2">Tabel 1</p>
+                    <h2 class="text-2xl font-bold text-gray-800">Edit Jenis Produk</h2>
+                    <p class="text-gray-500 mt-2">Tambah, lihat, ubah, dan hapus kategori produk seperti Perlengkapan Kos atau Perlengkapan Kampus.</p>
+                </a>
+
+                <a href="adminProduk.php" class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
+                    <p class="text-sm text-orange-500 font-semibold mb-2">Tabel 2</p>
+                    <h2 class="text-2xl font-bold text-gray-800">Edit Produk</h2>
+                    <p class="text-gray-500 mt-2">Tambah, lihat, ubah, dan hapus barang preloved yang berelasi dengan jenis produk.</p>
+                </a>
+            </div>
+        </main>
         <!-- FOOTER -->
          <?php include 'components/footer.php'; ?>
          <!-- END OF FOOTER -->
