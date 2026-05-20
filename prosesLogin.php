@@ -22,12 +22,14 @@ $input_pass  = $_POST['password'] ?? '';
 $login_sukses = false;
 $nama_user = "";
 $redirect_url = "produk.php";
+$is_admin = false;
 
 foreach ($users as $user) {
     if ($user['email'] === $input_email && $user['password'] === $input_pass) {
         $login_sukses = true;
         $nama_user = $user['nama'];
         $redirect_url = "produk.php";
+        $is_admin = false;
         break;
     }
 }
@@ -37,6 +39,7 @@ foreach ($admins as $admin) {
         $login_sukses = true;
         $nama_user = $admin['nama'];
         $redirect_url = "dashboardAdmin.php";
+        $is_admin = true;
         break;
     }
 }
@@ -44,6 +47,7 @@ foreach ($admins as $admin) {
 if ($login_sukses) {
     $_SESSION['user_name'] = $nama_user;
     $_SESSION['is_logged_in'] = true;
+    $_SESSION['is_admin'] = $is_admin;
 } else {
     header("Location: login.php?error=Gagal Login");
     exit();
